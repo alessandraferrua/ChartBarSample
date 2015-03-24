@@ -79,7 +79,7 @@ public class MainActivity extends ActionBarActivity implements LocationListener,
 
                     int snr = (int) satellite.getSnr();
 
-                    powerView.onRectSizeChanged(snr * 20, sat, String.valueOf(satellite.getPrn()));
+                    powerView.onRectSizeChanged(snr * 20, sat, Utils.getPrn(satellite.getPrn()));
 
                     if (satellite.usedInFix()) {
                         fix++;

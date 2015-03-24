@@ -113,6 +113,11 @@ public class Utils {
 		return pattern.matcher(nfdNormalizedString).replaceAll("");
 	}
 
-
+	public static String getPrn(int i) {
+		if(i<9)
+			return "0" + String.valueOf(i);
+		else
+			return String.valueOf(i);
+	}
 
 }

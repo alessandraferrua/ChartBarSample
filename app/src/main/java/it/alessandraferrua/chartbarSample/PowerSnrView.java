@@ -89,7 +89,7 @@ public class PowerSnrView extends View {
     protected void onDraw(Canvas canvas) {
         for (int i = 0; i < numerSatellites; i++) {
             canvas.drawRect(rects.get(i), paints.get(i));
-            canvas.drawText(prn[i], lefts[i] + (increment / 4) + increment, parentHeight - 100, paints.get(i));
+            canvas.drawText(prn[i], lefts[i] + (increment-16)/5 + increment, parentHeight - 92, paints.get(i));
         }
 
         super.onDraw(canvas);
@@ -101,7 +101,7 @@ public class PowerSnrView extends View {
         parentWidth = MeasureSpec.getSize(widthMeasureSpec);
         parentHeight = MeasureSpec.getSize(heightMeasureSpec);
 
-        increment = calculateIncrementalBar(parentWidth);
+        increment = calculateIncrementalBar(parentWidth-32);
 
         lefts = getLeftsIncrement(increment);
 
